@@ -214,8 +214,7 @@ p {
 .nav-container {
   height: 56px;
   background-color: var(--page-bg);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   transition: all var(--duration-fast) var(--ease-out);
 }
@@ -224,6 +223,13 @@ p {
   background-color: rgba(248, 248, 247, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-default);
+}
+
+/* Header Sticky Shell */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* Announcement Bar */
@@ -248,7 +254,7 @@ p {
 
 @media (min-width: 1024px) {
   .nav-content {
-    padding: 0 200px;
+    padding: 0 140px;
   }
 }
 

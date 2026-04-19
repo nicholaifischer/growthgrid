@@ -27,10 +27,7 @@ export function Navigation() {
   };
 
   return (
-    <>
-      <div className="announcement-bar">
-        GrowthGrid 2.0 is live — bringing AI to businesses worldwide &rarr;
-      </div>
+    <header className="site-header">
       <nav className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-content">
         <div className="brand-logo">GrowthGrid</div>
@@ -69,6 +66,9 @@ export function Navigation() {
         <button className="btn btn-primary w-full mt-4" onClick={(e) => navigateTo(e, '#pricing')}>Get Started</button>
       </div>
     </nav>
-    </>
+    <div className="announcement-bar">
+      GrowthGrid 2.0 is live — bringing AI to businesses worldwide &rarr;
+    </div>
+    </header>
   );
 }
