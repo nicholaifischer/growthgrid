@@ -18,6 +18,8 @@ export function Navigation() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navigateTo = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
+    if (window.location.pathname !== '/') return;
+    
     e.preventDefault();
     const target = document.querySelector(targetId);
     if (target) {
@@ -33,14 +35,14 @@ export function Navigation() {
         <div className="brand-logo">GrowthGrid</div>
         
         <div className="nav-links">
-          <a href="#features" onClick={(e) => navigateTo(e, '#features')} className="nav-link">Features</a>
-          <a href="#how-it-works" onClick={(e) => navigateTo(e, '#how-it-works')} className="nav-link">How It Works</a>
-          <a href="#testimonials" onClick={(e) => navigateTo(e, '#testimonials')} className="nav-link">Testimonials</a>
-          <a href="#pricing" onClick={(e) => navigateTo(e, '#pricing')} className="nav-link">Pricing</a>
+          <a href="/#features" onClick={(e) => navigateTo(e, '#features')} className="nav-link">Features</a>
+          <a href="/#how-it-works" onClick={(e) => navigateTo(e, '#how-it-works')} className="nav-link">How It Works</a>
+          <a href="/#testimonials" onClick={(e) => navigateTo(e, '#testimonials')} className="nav-link">Testimonials</a>
+          <a href="/pricing" className="nav-link">Pricing</a>
         </div>
         
         <div className="nav-actions">
-          <button className="btn btn-primary" onClick={(e) => navigateTo(e, '#pricing')}>Get Started</button>
+          <a href="/pricing" className="btn btn-primary">Get Started</a>
           
           <button 
             className="hamburger" 
@@ -59,11 +61,11 @@ export function Navigation() {
       
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#features" onClick={(e) => navigateTo(e, '#features')} className="nav-link">Features</a>
-        <a href="#how-it-works" onClick={(e) => navigateTo(e, '#how-it-works')} className="nav-link">How It Works</a>
-        <a href="#testimonials" onClick={(e) => navigateTo(e, '#testimonials')} className="nav-link">Testimonials</a>
-        <a href="#pricing" onClick={(e) => navigateTo(e, '#pricing')} className="nav-link">Pricing</a>
-        <button className="btn btn-primary w-full mt-4" onClick={(e) => navigateTo(e, '#pricing')}>Get Started</button>
+        <a href="/#features" onClick={(e) => navigateTo(e, '#features')} className="nav-link">Features</a>
+        <a href="/#how-it-works" onClick={(e) => navigateTo(e, '#how-it-works')} className="nav-link">How It Works</a>
+        <a href="/#testimonials" onClick={(e) => navigateTo(e, '#testimonials')} className="nav-link">Testimonials</a>
+        <a href="/pricing" className="nav-link">Pricing</a>
+        <a href="/pricing" className="btn btn-primary w-full mt-4">Get Started</a>
       </div>
     </nav>
     <div className="announcement-bar">
