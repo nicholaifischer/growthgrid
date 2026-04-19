@@ -4,7 +4,7 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer section-dark">
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">GrowthGrid</div>
