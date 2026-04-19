@@ -5,7 +5,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 export function FeaturesSection() {
   return (
-    <section className="section section-alt" id="features">
+    <section className="section section-dark" id="features">
       <div className="container">
         <ScrollReveal stagger className="features-grid">
           <div className="card card-interactive">

@@ -27,12 +27,6 @@ export function HeroSection() {
 
   return (
     <section className="hero-section" id="home">
-      {/* Ambient glow orbs for depth */}
-      <div className="hero-ambient">
-        <div className="hero-orb hero-orb--blue"></div>
-        <div className="hero-orb hero-orb--warm"></div>
-      </div>
-
       <div className="hero-container">
         {/* Trust bar */}
         <div className={`hero-trust-bar ${isLoaded ? 'hero-entered' : ''}`} style={{ transitionDelay: '0ms' }}>
