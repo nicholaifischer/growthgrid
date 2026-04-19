@@ -3,6 +3,8 @@
   Design Language: Manus-Inspired (Serene, Editorial, Minimalist)
 */
 
+@import "tailwindcss";
+
 :root {
   /* ── Colors ── */
   --ink-black: #34322D;
@@ -26,7 +28,7 @@
   --success: #25BA3B;
 
   /* ── Typography ── */
-  --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-display: var(--font-libre-baskerville), 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Fluid Type Scale */
@@ -187,6 +189,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: all var(--duration-fast) var(--ease-out);
 }
 
 .nav-container.scrolled {
@@ -591,6 +594,7 @@ p {
   transform: translateY(20px);
   transition: opacity var(--duration-normal) var(--ease-out),
               transform var(--duration-normal) var(--ease-out);
+  will-change: transform, opacity;
 }
 
 .reveal.is-visible {
@@ -598,7 +602,7 @@ p {
   transform: translateY(0);
 }
 
-/* Stagger logic applied via JS */
+/* Stagger logic applied via inline style transitionDelay by JS/React */
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
